@@ -27,7 +27,7 @@ SECRET_KEY = 'CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be us
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', ]
 
 
 # Application definition
@@ -116,6 +116,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+import os
+
+WKHTMLTOPDF_CMD = os.environ['WKHTMLTOPDF_CMD']
+
+print("\n#############################\n")
+
+print(WKHTMLTOPDF_CMD)
+
+print("\n#############################\n")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
